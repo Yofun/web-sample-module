@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>匿名函数自调用(增强)</title>
+</head>
+<body>
+    <!-- 如果想使用第三方库，先引入进来 -->
+    <script src="./js/lib/jquery.js"></script>
+    <script src="./js/modules/module1.js"></script>
+    <script src="./js/modules/module2.js"></script>
+
+    <script>
+        /**
+         * 增强版是为了引入其他模块
+         */
+        module1.say()
+
+        module2.say()
+
+        module2.change()
+
+    </script>
+</body>
+</html>

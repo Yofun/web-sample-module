@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>匿名函数自调用</title>
+</head>
+<body>
+    <script src="./modules/module1.js"></script>
+    <script src="./modules/module2.js"></script>
+    <script>
+        module1.say()
+        module2.say()
+
+        // 访问不到内部其他变量  因为暴露的module对象没有该属性
+        console.log(module1.data); // undefined
+        
+    </script>
+</body>
+</html>
